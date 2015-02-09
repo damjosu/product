@@ -54,7 +54,7 @@ public class StockManager
         int index = 0;      
         Product productMatch = null;
         boolean productFinded = false;
-        while (!productFinded)        
+        while (!productFinded && index < stock.size())        
         {            
             if (stock.get(index).getID() == id) 
             {
@@ -66,12 +66,12 @@ public class StockManager
         return productMatch;
     }
     
-    public Product findProduct2(String name)
+    public Product findProduct(String name)
     {
         int index = 0;      
         Product productMatch = null;
         boolean productFinded = false;
-        while (!productFinded)        
+        while (!productFinded && index < stock.size())        
         {            
             if (stock.get(index).getName() == name) 
             {
