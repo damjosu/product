@@ -66,6 +66,23 @@ public class StockManager
         return productMatch;
     }
     
+    public Product findProduct2(String name)
+    {
+        int index = 0;      
+        Product productMatch = null;
+        boolean productFinded = false;
+        while (!productFinded)        
+        {            
+            if (stock.get(index).getName() == name) 
+            {
+                productMatch = stock.get(index);
+                productFinded = true;
+            }
+            index++;
+        }
+        return productMatch;
+    }
+    
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
