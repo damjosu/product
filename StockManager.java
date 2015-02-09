@@ -93,4 +93,15 @@ public class StockManager
             System.out.println(product.toString());
         }
     }
+    
+    public void printStockProducts(int amount)
+    {
+        for (Product product : stock)
+        {
+            if (product.getQuantity() < amount)
+            {
+                System.out.println(product.toString());
+            }
+        }
+    }
 }
